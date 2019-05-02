@@ -1,0 +1,18 @@
+## まとめ(様々な関数)
+- 丸め処理はround, truncate, ceiling, floorを使う
+- 乱数を得るにはrandomを使う
+- 大文字小文字変換はdowncase, upcase, capitalizeを使う
+- 部分文字列を切り出すにはsubstringを使う
+- 文字列をセパレータで分割するにはsplit-stringを使う
+- 正規表現置換はreplace-regexp-in-stringを使う
+- シンボルと文字列の変換はintern, symbol-nameを使う
+- internは強制的にシンボルを作成するが、intern-softは既存のシンボルを返す
+- 変数の関節参照はsymbol-value, setを使う
+- 同一要素のリストやベクタはmake-list, make-vectorで作成する
+- リストの要素をひっくり返すにはreverseを使う
+- リストをソートするにはsort, sort*を使う
+- リストから要素を削除するにはdelq, deleteを使う
+- シーケンスを結合するにはappend, vconcatを使う
+- シーケンスをコピーするにはcopy-sequenceを使う
+- リストや文字列の長さはlengthで得る
+- 型変換関数はstring-to-char, number-to-string, char-to-string, string-to-charがある

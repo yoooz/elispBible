@@ -1,0 +1,12 @@
+## まとめ(Emacsの挙動を変更する)
+- コマンドにきーを割り当てるには`define-key`を使う
+- キーマップを作成するには`make-keymap`, `make-sparse-keymap`を使う
+- キーボード選択できるメニューを使ってコマンドを実行するにはone-key.elを使う
+- キー同時教えコマンドを実行するにはkey-chord.elを使う
+- フックを登録・削除するには`add-hook`, `remove-hook`を使う
+- フックを実行させるには`run-hook`を使う
+- アドバイスを定義するには`defadvice`を使う
+- アドバイスで引数にアクセスするには`ad-get-arg`, `ad-get-argsad-set-arg`, `ad-set-args`を使う
+- アドバイスで返り値にアクセスするには`ad-return-value`を読み書きする
+- aroundアドバイスで関数本体を呼び出すにはその部分に`ad-do-it`を置く
+- アドバイスの有効・無効を切り替えるには`ad-enable-advice`, `ad-disable-advice`の後に`ad-activate`を使う

@@ -1,0 +1,12 @@
+## まとめ(非同期プログラミング)
+- elispはシングルスレッドだが、タイマー、プロセス、ネットワークアクセスで非同期実行を行うことができる
+- 非同期実行はEmacsがアイドル状態のときに実行される
+- タイマーは変数とセットで扱う
+- タイマーを設置するには`run-with-timer`や`run-with-idle-timer`を使う
+- タイマーを無効にするには`cancel-timer`を使う
+- コマンド終了後に実行する関数を指定するには`run-with-timer`や`run-with-idle-timer`で秒数に0を指定する
+- deferred.elは非同期実行を簡単にするためのライブラリ
+- deferred.elの基本的な使い方は一連の処理を`deferred:$`で囲み、`deferred:next`や`deferred:process`から`deferred:nextc`へつなげていく
+- プロセスの評価結果の文字列の遅延オブジェクトを作成するには`deferred:process`を使う
+- プロセスバッファの遅延オブジェクトを作成するには`deferred:process-buffer`を使う
+- URLの内容を取得するには`deferred:url-retrieve`を使う

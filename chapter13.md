@@ -1,0 +1,15 @@
+## まとめ(anything.elで簡単アプリケーション作成)
+- anythingコマンドを選択して実行するには`M-x anything-execute-anything-command`を使う
+- 情報源を選択して実行するには`M-x anything-call-source`
+- anythingコマンドを作成するには`anything^other-buffer`を呼び出すコマンドを定義する
+- `anything`関数は`anything-other-buffer`よりも細かな制御ができる
+- 型は`define-anything-type-attribute`で定義され`anything-c-arrange-type-attribute`で定義を変更する
+- プラグインを定義するには`anything-compile-source-functions`にプラグイン展開関数を追加する
+- 情報源作成
+  - 情報源の最小構成は`name`(情報源名)、`candidates`(候補関数)、`action`(アクション)属性である
+  - バッファの各業を候補にするには`candidates-in-buffer`属性を使う
+  - 候補ファイルをして椅子rには`candidates-file`,`grep-candidates`属性を使う
+  - 候補の型を指定するには`type`属性を使う
+  - persistent-actionを実行するには`persistent-action`属性を使う
+  - アクションに渡るオブジェクトから表示文字列へ変換するには`real-to-display`属性を使う
+  - 表示文字列からアクションに渡るオブジェクトに変換するには`display-to-real`属性を使う

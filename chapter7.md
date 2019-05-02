@@ -1,0 +1,29 @@
+## まとめ(Common Lispマクロ)
+- リスト構造おを分解して各要素を変数に代入するには`destructuring-bind`を使う
+- `defun*`と`defmacro`でCommon Lispの関数・マクロ定義ができる
+- リスト要素の追加・削除には`push`, `pushnew`, `pop`を使う
+- 汎変数に代入するには`self`, `letf`を使う
+- レキシカルスコープを作成するには`lexical-let`, `lexical-let*`を使う
+- 関数内関数を定義するには`flet`, `labels`, `letf`を使う
+- 場合分けには`case`,`typecase`を使う
+- 非局所脱出は`block`/`return`や`catch`/`throw`を使う
+- 構造体を定義するには`defstruct`を使う
+- loopマクロ
+  - 数値ループ
+    - `for VAR [from/downfrom]START[to/downto/below/above] END`
+  - リストに対してのループ
+    - `loop for VAR in LIST`
+  - 条件ループ
+    - `[while/until]CONDITION`
+  - 計算結果を求める
+    - `[collect/append/sum/maximize/minimize] FORM into VAR`
+  - リストが条件を満たすか調べる
+    - `[always/never/thereis/count] CONDITION`
+  - ローカル変数
+    - `[with/for] VAR = FORM`
+  - 事前処理と事後処理
+    - `[initially/finally] FORMS`
+  - 返り値
+    - `finally return FORM`, `return FORM`
+  - 条件分岐
+    - `[if/unless] CONDITION CLAUSE else CLAUSE`
